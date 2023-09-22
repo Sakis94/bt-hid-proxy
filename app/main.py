@@ -64,9 +64,8 @@ while device is None:
     try:
         device = InputDevice(device_path)
         # keep input guarded
+        print("Keyboard found", device)
         device.grab()
-
-        print(device)
     except Exception as ex:
         print("No keyboard - waiting...")
         time.sleep(1)
@@ -74,6 +73,6 @@ while device is None:
 try:
     main()
 except IOError as e:
-    print("Device connection lost...")
+    print("Device connection lost...", e)
     # we lost connection to the device resume wait loop
     device = None
