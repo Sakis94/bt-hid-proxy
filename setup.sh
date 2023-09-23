@@ -39,4 +39,4 @@ sudo cp ./bt-hid-proxy.service /etc/systemd/system
 systemctl enable bt-hid-proxy.service
 systemctl daemon-reload
 
-chmod 777 unis.sh
+chmod 777 ./unis.sh
